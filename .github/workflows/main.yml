@@ -26,4 +26,4 @@ jobs:
         ssh-add ~/.ssh/id_rsa
     - name: Deploy code to EC2
       run: |
-        ssh -o StrictHostKeyChecking=no ec2-user@${{ secrets.EC2HOST }} "cd /home/ec2-user/testLetter/test && git pull"
+        ssh -o StrictHostKeyChecking=no ec2-user@${{ secrets.EC2HOST }} "cd /home/ec2-user/testLetter && git pull"

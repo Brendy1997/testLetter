@@ -13,8 +13,8 @@ jobs:
       uses: actions/checkout@v2
     - name: Install SSH
       run: |
-        sudo yum update -y 
-        sudo yum install -y openssh-client
+        sudo apt-get update -y 
+        sudo apt-get install -y openssh-client
     - name: Add SSH key
       run: |
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > $HOME/.ssh/id_rsa
